@@ -1,305 +1,194 @@
 <html lang="en">
- <head>
+<head>
   <meta charset="utf-8"/>
-  <meta content="width=device-width, initial-scale=1" name="viewport"/>
-  <title>
-   AKBAR Goods
-  </title>
-  <script src="https://cdn.tailwindcss.com">
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>AKBAR & Co Goods Transport Agency</title>
+
+  <!-- TailwindCSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          animation: {
+            float: 'float 6s ease-in-out infinite',
+            fadeIn: 'fadeIn 2s ease-out',
+          },
+          keyframes: {
+            float: {
+              '0%, 100%': { transform: 'translateY(0)' },
+              '50%': { transform: 'translateY(-10px)' },
+            },
+            fadeIn: {
+              from: { opacity: 0 },
+              to: { opacity: 1 },
+            }
+          }
+        }
+      }
+    }
   </script>
+
+  <!-- Icons & Fonts -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
-  <link href="https://fonts.googleapis.com/css2?family=Segoe+UI&amp;display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet"/>
+
   <style>
-   body {
-      font-family: 'Segoe UI', sans-serif;
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #fff;
+      position: relative;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+    #background-truck {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      width: 120vw;
+      max-width: 1600px;
+      height: auto;
+      opacity: 0.07;
+      transform: translate(-50%, -50%);
+      z-index: 0;
+      pointer-events: none;
+      user-select: none;
+      filter: drop-shadow(0 0 5px rgba(139,0,0,0.15));
+    }
+    main, header, nav, footer, section {
+      position: relative;
+      z-index: 10;
     }
   </style>
- </head>
- <body class="relative min-h-screen bg-gradient-to-b from-indigo-900 via-purple-900 to-pink-900 text-gray-100">
-  <img alt="Vibrant traditional Pakistani truck art background with colorful floral and geometric patterns on a truck" class="absolute inset-0 w-full h-full object-cover -z-10 brightness-50" height="1080" src="https://storage.googleapis.com/a1aa/image/9fee44fa-8d5b-435e-4288-2a1f9d2385ac.jpg" width="1920"/>
-  <div class="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-black/80 -z-10">
-  </div>
-  <header class="max-w-7xl mx-auto px-6 py-12 flex flex-col md:flex-row items-center justify-between">
-   <h1 class="text-5xl md:text-6xl font-extrabold text-pink-400 drop-shadow-lg mb-8 md:mb-0">
-    AKBAR Goods
-   </h1>
-   <nav class="space-x-6 text-lg font-semibold text-pink-300">
-    <a class="hover:text-pink-500 transition" href="#services">
-     Services
-    </a>
-    <a class="hover:text-pink-500 transition" href="#fleet">
-     Fleet
-    </a>
-    <a class="hover:text-pink-500 transition" href="#coverage">
-     Coverage
-    </a>
-    <a class="hover:text-pink-500 transition" href="#contact">
-     Contact
-    </a>
-   </nav>
+</head>
+
+<body class="text-gray-900">
+
+  <!-- Background Truck -->
+  <img id="background-truck" src="https://storage.googleapis.com/a1aa/image/f3c24173-4659-4c8b-8526-3cba240c2751.jpg" alt="Truck Art: A colorful and beautifully decorated traditional Pakistani truck with vibrant truck art, parked on a road with a clear sky background" class="animate-float"/>
+
+  <!-- Header -->
+  <header class="relative bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1581090700227-1e8f0f52f345?auto=format&fit=crop&w=1600&q=80');">
+    <div class="bg-gradient-to-br from-red-900 via-red-800 to-red-700 bg-opacity-90 py-28 px-6 text-center max-w-5xl mx-auto rounded-b-3xl shadow-lg animate-fadeIn">
+      <h1 class="text-white text-5xl sm:text-6xl font-extrabold drop-shadow-lg leading-tight">AKBAR & Co Goods Transport Agency</h1>
+      <p class="mt-4 text-xl sm:text-2xl font-semibold text-red-200 drop-shadow-md tracking-wide">
+        <span id="typing-text" aria-live="polite" aria-atomic="true"></span>
+      </p>
+    </div>
   </header>
-  <main class="max-w-7xl mx-auto px-6 pb-20 space-y-20">
-   <!-- Services Section -->
-   <section class="bg-gradient-to-r from-purple-800 via-indigo-800 to-pink-800 rounded-xl p-10 shadow-lg" id="services">
-    <h2 class="text-4xl font-bold text-pink-400 mb-8 border-b-4 border-pink-500 inline-block pb-2">
-     Our Services
-    </h2>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-10 text-gray-100">
-     <div class="bg-gradient-to-br from-pink-700 via-purple-700 to-indigo-700 rounded-lg p-6 flex flex-col items-center shadow-md hover:scale-105 transition-transform">
-      <img alt="A modern cargo truck on highway representing daily goods transportation service" class="rounded-md mb-4 shadow-lg" height="150" src="https://storage.googleapis.com/a1aa/image/32e189a7-b88d-484e-936e-e6452fba245d.jpg" width="200"/>
-      <h3 class="text-2xl font-semibold mb-2 text-pink-300">
-       Daily Service
-      </h3>
-      <p class="text-center text-pink-100">
-       Reliable daily transportation to key cities including DG Khan, Jampur, and Rajanpur.
-      </p>
-     </div>
-     <div class="bg-gradient-to-br from-pink-700 via-purple-700 to-indigo-700 rounded-lg p-6 flex flex-col items-center shadow-md hover:scale-105 transition-transform">
-      <img alt="Express delivery truck speeding on road with motion blur" class="rounded-md mb-4 shadow-lg" height="150" src="https://storage.googleapis.com/a1aa/image/e35c267a-8a4a-428b-9524-be46d16cf2aa.jpg" width="200"/>
-      <h3 class="text-2xl font-semibold mb-2 text-pink-300">
-       Express Delivery
-      </h3>
-      <p class="text-center text-pink-100">
-       Fast and secure express delivery for urgent shipments across Pakistan.
-      </p>
-     </div>
-     <div class="bg-gradient-to-br from-pink-700 via-purple-700 to-indigo-700 rounded-lg p-6 flex flex-col items-center shadow-md hover:scale-105 transition-transform">
-      <img alt="Logistics manager planning routes on digital map with tablet" class="rounded-md mb-4 shadow-lg" height="150" src="https://storage.googleapis.com/a1aa/image/23f25803-f925-4945-d24f-7bdbbac4d657.jpg" width="200"/>
-      <h3 class="text-2xl font-semibold mb-2 text-pink-300">
-       Custom Logistics
-      </h3>
-      <p class="text-center text-pink-100">
-       Tailored logistics solutions to meet your business needs efficiently.
-      </p>
-     </div>
+
+  <!-- Navigation -->
+  <nav class="bg-red-900 shadow-md sticky top-0 z-50" role="navigation" aria-label="Primary Navigation">
+    <div class="max-w-6xl mx-auto flex justify-center space-x-16 py-5 px-4">
+      <a class="text-white font-semibold text-lg hover:text-red-300 transition" href="#services">Services</a>
+      <a class="text-white font-semibold text-lg hover:text-red-300 transition" href="#contact">Contact</a>
+      <a class="text-white font-semibold text-lg hover:text-red-300 transition" href="#features">Why Us?</a>
     </div>
-   </section>
-   <!-- Fleet Section -->
-   <section class="bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 rounded-xl p-10 shadow-lg" id="fleet">
-    <h2 class="text-4xl font-bold text-pink-400 mb-8 border-b-4 border-pink-500 inline-block pb-2">
-     Our Fleet
-    </h2>
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
-     <div class="bg-gradient-to-br from-pink-700 via-purple-700 to-indigo-700 rounded-lg overflow-hidden shadow-md hover:shadow-pink-500 transition-shadow">
-      <img alt="Heavy duty truck with trailer on highway transporting goods" class="w-full h-48 object-cover shadow-lg" height="250" src="https://storage.googleapis.com/a1aa/image/30d2d1bc-0ed6-4e31-d637-d7d5416ad299.jpg" width="400"/>
-      <div class="p-4 text-pink-100">
-       <h3 class="text-xl font-semibold mb-1 text-pink-300">
-        Heavy Duty Truck
-       </h3>
-       <p>
-        Ideal for large cargo and long-distance transport.
-       </p>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="max-w-5xl mx-auto px-6 sm:px-12" role="main">
+
+    <!-- Services -->
+    <section id="services" class="bg-red-50 rounded-3xl shadow-lg mt-16 py-16 px-8 sm:px-16" tabindex="-1">
+      <h2 class="text-4xl font-extrabold mb-10 text-center text-red-900 tracking-tight">Daily Transport Services</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 text-red-900 font-semibold text-xl" role="list">
+        <div class="flex items-center space-x-4 bg-white rounded-xl border border-red-300 p-5 shadow hover:shadow-lg transition hover:scale-105" role="listitem">
+          <i class="fas fa-truck text-red-700 text-3xl hover:animate-bounce" aria-hidden="true"></i>
+          <span>Dera Ghazi Khan</span>
+        </div>
+        <div class="flex items-center space-x-4 bg-white rounded-xl border border-red-300 p-5 shadow hover:shadow-lg transition hover:scale-105" role="listitem">
+          <i class="fas fa-truck text-red-700 text-3xl hover:animate-bounce" aria-hidden="true"></i>
+          <span>Jampur</span>
+        </div>
+        <div class="flex items-center space-x-4 bg-white rounded-xl border border-red-300 p-5 shadow hover:shadow-lg transition hover:scale-105" role="listitem">
+          <i class="fas fa-truck text-red-700 text-3xl hover:animate-bounce" aria-hidden="true"></i>
+          <span>Mohammadpur</span>
+        </div>
+        <div class="flex items-center space-x-4 bg-white rounded-xl border border-red-300 p-5 shadow hover:shadow-lg transition hover:scale-105" role="listitem">
+          <i class="fas fa-truck text-red-700 text-3xl hover:animate-bounce" aria-hidden="true"></i>
+          <span>Dajal</span>
+        </div>
       </div>
-     </div>
-     <div class="bg-gradient-to-br from-pink-700 via-purple-700 to-indigo-700 rounded-lg overflow-hidden shadow-md hover:shadow-pink-500 transition-shadow">
-      <img alt="Medium sized cargo truck parked in warehouse" class="w-full h-48 object-cover shadow-lg" height="250" src="https://storage.googleapis.com/a1aa/image/fb97a5bc-b8c8-4bce-7b33-77297d8a5a3a.jpg" width="400"/>
-      <div class="p-4 text-pink-100">
-       <h3 class="text-xl font-semibold mb-1 text-pink-300">
-        Medium Cargo Truck
-       </h3>
-       <p>
-        Perfect for regional deliveries and medium loads.
-       </p>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="bg-white rounded-3xl shadow-lg mt-20 py-16 px-8 sm:px-16 border-t-8 border-red-900" tabindex="-1">
+      <h2 class="text-4xl font-extrabold mb-12 text-center text-red-900 tracking-tight">Contact Us</h2>
+      <div class="max-w-md mx-auto text-center text-gray-900 text-lg font-semibold space-y-8">
+        <p class="flex items-center justify-center space-x-4">
+          <i class="fas fa-id-badge text-red-700 text-3xl" aria-hidden="true"></i>
+          <span>Haji Ghulam Akbar</span>
+        </p>
+        <p class="flex items-center justify-center space-x-4">
+          <i class="fas fa-phone-alt text-red-700 text-3xl" aria-hidden="true"></i>
+          <span>Haji Faiz Rasool –</span>
+          <a href="tel:03336059132" class="text-red-700 hover:text-red-900 underline" aria-label="Call Haji Faiz Rasool at 0333 6059132">0333 6059132</a>
+        </p>
+        <p class="flex items-center justify-center space-x-4">
+          <i class="fas fa-phone-alt text-red-700 text-3xl" aria-hidden="true"></i>
+          <span>Zahid Rasool –</span>
+          <a href="tel:03336457430" class="text-red-700 hover:text-red-900 underline" aria-label="Call Zahid Rasool at 0333 6457430">0333 6457430</a>
+        </p>
+        <img src="https://images.unsplash.com/photo-1612438829442-9e9cc72028d7?auto=format&fit=crop&w=1200&q=80" class="mt-10 rounded-2xl shadow-lg w-full object-cover" alt="Contact Office with reception desk and friendly staff, bright and welcoming environment" loading="lazy"/>
       </div>
-     </div>
-     <div class="bg-gradient-to-br from-pink-700 via-purple-700 to-indigo-700 rounded-lg overflow-hidden shadow-md hover:shadow-pink-500 transition-shadow">
-      <img alt="Pickup truck loaded with goods ready for delivery" class="w-full h-48 object-cover shadow-lg" height="250" src="https://storage.googleapis.com/a1aa/image/f6b73f14-2c49-4c76-f5f0-abbcf45772b4.jpg" width="400"/>
-      <div class="p-4 text-pink-100">
-       <h3 class="text-xl font-semibold mb-1 text-pink-300">
-        Pickup Truck
-       </h3>
-       <p>
-        Flexible and agile for small cargo and quick deliveries.
-       </p>
+    </section>
+
+    <!-- Why Us -->
+    <section id="features" class="bg-red-50 rounded-3xl shadow-lg mt-20 py-16 px-8 sm:px-16" tabindex="-1">
+      <h2 class="text-4xl font-extrabold mb-12 text-center text-red-900 tracking-tight">Why Choose AKBAR & Co?</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-10 text-red-900 font-semibold text-xl">
+        <div class="flex items-center space-x-5 bg-white rounded-xl border border-red-400 p-6 shadow hover:shadow-xl hover:scale-105 transition" role="listitem">
+          <i class="fas fa-check-circle text-red-700 text-4xl" aria-hidden="true"></i>
+          <span>Over 20 Years of Experience</span>
+        </div>
+        <div class="flex items-center space-x-5 bg-white rounded-xl border border-red-400 p-6 shadow hover:shadow-xl hover:scale-105 transition" role="listitem">
+          <i class="fas fa-check-circle text-red-700 text-4xl" aria-hidden="true"></i>
+          <span>Safe & Timely Deliveries</span>
+        </div>
+        <div class="flex items-center space-x-5 bg-white rounded-xl border border-red-400 p-6 shadow hover:shadow-xl hover:scale-105 transition" role="listitem">
+          <i class="fas fa-check-circle text-red-700 text-4xl" aria-hidden="true"></i>
+          <span>Covered Vehicles for All Seasons</span>
+        </div>
+        <div class="flex items-center space-x-5 bg-white rounded-xl border border-red-400 p-6 shadow hover:shadow-xl hover:scale-105 transition" role="listitem">
+          <i class="fas fa-check-circle text-red-700 text-4xl" aria-hidden="true"></i>
+          <span>Trusted by 100+ Clients</span>
+        </div>
       </div>
-     </div>
-     <div class="bg-gradient-to-br from-pink-700 via-purple-700 to-indigo-700 rounded-lg overflow-hidden shadow-md hover:shadow-pink-500 transition-shadow">
-      <img alt="Refrigerated truck for transporting perishable goods" class="w-full h-48 object-cover shadow-lg" height="250" src="https://storage.googleapis.com/a1aa/image/f96e429d-d115-4050-c29d-7338ce69f5b5.jpg" width="400"/>
-      <div class="p-4 text-pink-100">
-       <h3 class="text-xl font-semibold mb-1 text-pink-300">
-        Refrigerated Truck
-       </h3>
-       <p>
-        Maintains temperature control for sensitive shipments.
-       </p>
-      </div>
-     </div>
-    </div>
-   </section>
-   <!-- Coverage Section -->
-   <section class="bg-gradient-to-r from-purple-800 via-indigo-800 to-pink-800 rounded-xl p-10 shadow-lg" id="coverage">
-    <h2 class="text-4xl font-bold text-pink-400 mb-8 border-b-4 border-pink-500 inline-block pb-2">
-     Coverage Areas
-    </h2>
-    <p class="mb-8 text-pink-200 max-w-3xl mx-auto text-lg">
-     AKBAR Goods proudly serves a wide range of cities and towns daily, ensuring your goods reach their destination safely and on time.
-    </p>
-    <ul class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 max-w-4xl mx-auto text-pink-100 text-lg font-semibold">
-     <li class="flex items-center space-x-3">
-      <i class="fas fa-map-marker-alt text-pink-400">
-      </i>
-      <span>
-       DG Khan
-      </span>
-     </li>
-     <li class="flex items-center space-x-3">
-      <i class="fas fa-map-marker-alt text-pink-400">
-      </i>
-      <span>
-       Jampur
-      </span>
-     </li>
-     <li class="flex items-center space-x-3">
-      <i class="fas fa-map-marker-alt text-pink-400">
-      </i>
-      <span>
-       Dajal
-      </span>
-     </li>
-     <li class="flex items-center space-x-3">
-      <i class="fas fa-map-marker-alt text-pink-400">
-      </i>
-      <span>
-       Muhammad Pur
-      </span>
-     </li>
-     <li class="flex items-center space-x-3">
-      <i class="fas fa-map-marker-alt text-pink-400">
-      </i>
-      <span>
-       Fazalpur
-      </span>
-     </li>
-     <li class="flex items-center space-x-3">
-      <i class="fas fa-map-marker-alt text-pink-400">
-      </i>
-      <span>
-       Rajanpur
-      </span>
-     </li>
-     <li class="flex items-center space-x-3">
-      <i class="fas fa-map-marker-alt text-pink-400">
-      </i>
-      <span>
-       Multan
-      </span>
-     </li>
-     <li class="flex items-center space-x-3">
-      <i class="fas fa-map-marker-alt text-pink-400">
-      </i>
-      <span>
-       Bahawalpur
-      </span>
-     </li>
-     <li class="flex items-center space-x-3">
-      <i class="fas fa-map-marker-alt text-pink-400">
-      </i>
-      <span>
-       Rahim Yar Khan
-      </span>
-     </li>
-     <li class="flex items-center space-x-3">
-      <i class="fas fa-map-marker-alt text-pink-400">
-      </i>
-      <span>
-       Muzaffargarh
-      </span>
-     </li>
-     <li class="flex items-center space-x-3">
-      <i class="fas fa-map-marker-alt text-pink-400">
-      </i>
-      <span>
-       Vehari
-      </span>
-     </li>
-     <li class="flex items-center space-x-3">
-      <i class="fas fa-map-marker-alt text-pink-400">
-      </i>
-      <span>
-       Okara
-      </span>
-     </li>
-    </ul>
-   </section>
-   <!-- Testimonials Section -->
-   <section class="bg-gradient-to-r from-pink-800 via-purple-800 to-indigo-900 rounded-xl p-10 shadow-lg">
-    <h2 class="text-4xl font-bold text-pink-400 mb-8 border-b-4 border-pink-500 inline-block pb-2 text-center">
-     What Our Clients Say
-    </h2>
-    <div class="max-w-4xl mx-auto space-y-10">
-     <blockquote class="bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 rounded-lg p-6 italic text-pink-100 shadow-md border border-pink-600">
-      <p>
-       "AKBAR Goods has been our trusted logistics partner for years. Their timely deliveries and professional service are unmatched."
-      </p>
-      <footer class="mt-4 text-pink-300 font-semibold">
-       – Ali Khan, Business Owner
-      </footer>
-     </blockquote>
-     <blockquote class="bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 rounded-lg p-6 italic text-pink-100 shadow-md border border-pink-600">
-      <p>
-       "The fleet is always in excellent condition and the drivers are courteous. Highly recommend AKBAR Goods for all transportation needs."
-      </p>
-      <footer class="mt-4 text-pink-300 font-semibold">
-       – Sara Ahmed, Distributor
-      </footer>
-     </blockquote>
-     <blockquote class="bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 rounded-lg p-6 italic text-pink-100 shadow-md border border-pink-600">
-      <p>
-       "Their custom logistics solutions helped streamline our supply chain and saved us time and money."
-      </p>
-      <footer class="mt-4 text-pink-300 font-semibold">
-       – Imran Malik, Logistics Manager
-      </footer>
-     </blockquote>
-    </div>
-   </section>
-   <!-- Contact Section -->
-   <section class="bg-gradient-to-r from-purple-800 via-indigo-800 to-pink-800 rounded-xl p-10 shadow-lg max-w-md mx-auto" id="contact">
-    <h2 class="text-4xl font-bold text-pink-400 mb-8 border-b-4 border-pink-500 inline-block pb-2 text-center">
-     Contact Us
-    </h2>
-    <div class="space-y-6 text-pink-100 text-lg">
-     <p class="flex items-center justify-center space-x-4">
-      <i class="fas fa-phone-alt text-pink-400 text-xl">
-      </i>
-      <span>
-       Zahid Rasool: 03XX-XXXXXXX
-      </span>
-     </p>
-     <p class="flex items-center justify-center space-x-4">
-      <i class="fas fa-phone-alt text-pink-400 text-xl">
-      </i>
-      <span>
-       Faiz Rasool: 03XX-XXXXXXX
-      </span>
-     </p>
-     <p class="flex items-center justify-center space-x-4">
-      <i class="fas fa-envelope text-pink-400 text-xl">
-      </i>
-      <span>
-       info@akbargoods.com
-      </span>
-     </p>
-     <p class="flex items-center justify-center space-x-4">
-      <i class="fas fa-map-marker-alt text-pink-400 text-xl">
-      </i>
-      <span>
-       123 Logistics Road, Multan, Pakistan
-      </span>
-     </p>
-    </div>
-    <form action="#" class="mt-10 space-y-6" method="POST">
-     <input class="w-full rounded-md px-4 py-3 text-gray-900 focus:outline-pink-400" name="name" placeholder="Your Name" required="" type="text"/>
-     <input class="w-full rounded-md px-4 py-3 text-gray-900 focus:outline-pink-400" name="email" placeholder="Your Email" required="" type="email"/>
-     <textarea class="w-full rounded-md px-4 py-3 text-gray-900 focus:outline-pink-400" name="message" placeholder="Your Message" required="" rows="4"></textarea>
-     <button class="w-full bg-pink-400 text-gray-900 font-bold py-3 rounded-md hover:bg-pink-500 transition" type="submit">
-      Send Message
-     </button>
-    </form>
-   </section>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="mt-24 text-center px-6 sm:px-16" tabindex="-1" aria-label="Client testimonials">
+      <h2 class="text-3xl font-extrabold text-red-900 mb-6">What Our Clients Say</h2>
+      <blockquote class="text-lg italic text-gray-700 max-w-2xl mx-auto">"AKBAR &amp; Co never fails to deliver on time. Best in Multan!" – Client XYZ</blockquote>
+    </section>
   </main>
-  <footer class="bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 text-pink-300 py-6 text-center text-sm">
-   © 2024 AKBAR Goods. All rights reserved.
+
+  <!-- Footer -->
+  <footer class="bg-red-900 text-white text-center py-8 mt-24 shadow-inner relative z-10">
+    <p class="text-sm sm:text-base select-none">
+      © 2025 AKBAR &amp; Co Goods Transport Agency. All Rights Reserved.
+    </p>
   </footer>
- </body>
+
+  <!-- WhatsApp Floating Button -->
+  <a href="https://wa.me/923336059132" target="_blank" class="fixed bottom-5 right-5 bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition z-50" aria-label="Chat on WhatsApp">
+    <i class="fab fa-whatsapp text-2xl" aria-hidden="true"></i>
+  </a>
+
+  <!-- Typing Animation -->
+  <script>
+    const text = "Reliable • On Time • Safe";
+    let i = 0;
+    const typing = () => {
+      if (i < text.length) {
+        document.getElementById("typing-text").textContent += text.charAt(i);
+        i++;
+        setTimeout(typing, 80);
+      }
+    };
+    typing();
+  </script>
+
+</body>
 </html>
